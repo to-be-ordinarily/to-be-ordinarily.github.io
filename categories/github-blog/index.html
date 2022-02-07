@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="robots" content="noindex"><meta><title>카테고리: github blog - 평범한 개발자</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="평범한 개발자"><meta name="msapplication-TileImage" content="/img/favicon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="평범한 개발자"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta property="og:type" content="blog"><meta property="og:title" content="평범한 개발자"><meta property="og:url" content="https://to-be-ordinarily.github.io/"><meta property="og:site_name" content="평범한 개발자"><meta property="og:locale" content="ko_KR"><meta property="og:image" content="https://to-be-ordinarily.github.io/img/og_image.png"><meta property="article:author" content="to-be-ordinarily"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://to-be-ordinarily.github.io"},"headline":"평범한 개발자","image":["https://to-be-ordinarily.github.io/img/og_image.png"],"author":{"@type":"Person","name":"to-be-ordinarily"},"publisher":{"@type":"Organization","name":"평범한 개발자","logo":{"@type":"ImageObject","url":"https://to-be-ordinarily.github.io/img/logo.png"}},"description":""}</script><link rel="icon" href="/img/favicon.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/agate.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 6.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img class="logo" src="/img/logo.png" alt="평범한 개발자" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/to-be-ordinarily"><i class="fab fa-github"></i></a><a class="navbar-item search" title="검색" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item dark" id="dark-nav" title="Dark Mode" href="javascript:toggleTheme();"><i class="fas fa-moon" id="dark-icon"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories">카테고리</a></li><li class="is-active"><a href="#" aria-current="page">github blog</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-01-26T07:01:45.000Z" title="2022. 1. 26. 오후 4:01:45">2022-01-26</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-02-01T03:59:16.753Z" title="2022. 2. 1. 오후 12:59:16">2022-02-01</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/github-blog/">github blog</a></span><span class="level-item">4분안에 읽기 (약 531 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/01/26/blog-setting/">Github 블로그 width Hexo: 기본 설정편</a></h1><div class="content"><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">💡 환경</span><br><span class="line">    PC: MacBoock Pro (16-inch, 2021)</span><br><span class="line">    OS: macOS Monterey Version 12.1</span><br><span class="line">    CPU: Apple M1 Pro</span><br><span class="line">    Memory: 16GB</span><br><span class="line">    Node.js: v17.4.0.</span><br><span class="line">    npm: 8.3.1</span><br><span class="line">    Git: version 2.34.1</span><br></pre></td></tr></table></figure>
+<h1>블로그 설정하기 : _config.yml</h1>
+<p>설정의 범위가 너무 방대해서 설정을 하였지만 누락된것들은 추후 조금씩 업데이트 하겠습니다.</p>
+<h2 id="Hexo-설정하기"><a target="_blank" rel="noopener" href="https://hexo.io/ko/docs/configuration">Hexo 설정하기</a></h2>
+<h3 id="기본-정보-변경">기본 정보 변경</h3>
+<p>사이트에 표현되는 profile영역이라고 생각하면됩니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#Line 6 ~12</span><br><span class="line"></span><br><span class="line">#Site</span><br><span class="line">title: &#x27;평범한 개발자&#x27;</span><br><span class="line">subtitle: &#x27;&#x27;</span><br><span class="line">description: &#x27;&#x27;</span><br><span class="line">keywords:</span><br><span class="line">author: &#x27;to-be-ordinarily&#x27;</span><br><span class="line">language: &#x27;ko&#x27;</span><br><span class="line">timezone: &#x27;Asia/Seoul&#x27;</span><br></pre></td></tr></table></figure>
+<p>아래 이미지 영역에 표현되는 정보들을 설정한다.<br>
+<img src="/img/assets/git_blog_setting/git_blog_setting_site.png" alt=""></p>
+<h3 id="접속URL">접속URL</h3>
+<p>포스팅 후 접속하는 URL을 의미합니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#Line 16</span><br><span class="line">url: https://to-be-ordinarily.github.io/</span><br></pre></td></tr></table></figure>
+<h3 id="포스팅-종류-설정">포스팅 종류 설정</h3>
+<p><a target="_blank" rel="noopener" href="https://hexo.io/ko/docs/writing.html">Hexo 포스팅 방법</a>은 <code>draft</code>, <code>post</code>, <code>page</code>로 총 3가지가 있습니다.</p>
+<ol>
+<li><code>draft</code>: 포스트 후 로컬 환경에서만 확인 가능합니다.</li>
+<li><code>post</code>: deploy시 해당 포스트가 github에 deploy됩니다.</li>
+<li><code>page</code>: 공식문서에 아직 확인을 못하여 확인하면 추가하도록하겠습니다.</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#Line 35</span><br><span class="line">default_layout: draft</span><br></pre></td></tr></table></figure>
+<p>default_layout을 설정하는 이유는 <code>hexo deploy</code>시 <code>/source/_posts</code>에 있는 글들이 github로 commit되기 때문에 작성 중이거나 수정중인 글이 반영되는 처참한 상황이 발생할 수 있습니다.</p>
+<p>그래서 Hexo는 draft라는 포스트 하기 전 임시 작업 공간을 만들어 두었습니다.<br>
+draft영역에 포스팅을 하기 위해서는 아래와 같이 명령어를 입력해야합니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new draft &#x27;draft-psot-name&#x27;</span><br></pre></td></tr></table></figure>
+<p>만약을 위해 dfaft에 만들고 완성 후 post로 publish하는 것이 좋습니다.<br>
+포스트 생성시 항상 draft를 입력하는 번거로움이 있습니다.<br>
+그래서 <code>Line 35</code> 설정을 하면 <code>/source/_draft</code>폴더에 포스트가 생성되기 때문에 deploy에 대한 안정성을 보장할 수 있습니다.</p>
+<p>추후 설정하게 되는 속성들은 지속적으로 업데이트하여 공유하도록 하겠습니다.</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-01-26T07:01:45.000Z" title="2022. 1. 26. 오후 4:01:45">2022-01-26</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-02-01T03:59:16.753Z" title="2022. 2. 1. 오후 12:59:16">2022-02-01</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/github-blog/">github blog</a></span><span class="level-item">7분안에 읽기 (약 1002 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/01/26/blog-install/">Github 블로그 width Hexo : 설치편</a></h1><div class="content"><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">💡 환경</span><br><span class="line">    PC: MacBoock Pro (16-inch, 2021)</span><br><span class="line">    OS: macOS Monterey Version 12.1</span><br><span class="line">    CPU: Apple M1 Pro</span><br><span class="line">    Memory: 16GB</span><br><span class="line">    Node.js: v17.4.0.</span><br><span class="line">    npm: 8.3.1</span><br><span class="line">    Git: version 2.34.1</span><br></pre></td></tr></table></figure>
+<h2 id="블로그를-생성하게된-이유">블로그를 생성하게된 이유!</h2>
+<ol>
+<li>구글링 시 블로그를 찾는데 많은 시간을 허비하여 스스로 보기 편한 블로그를 만들어보기로 했습니다.</li>
+<li>공식문서가 아직까지는 낯설어 공식문서보는 것을 연습하여 블로그에 기록하기로 했습니다.</li>
+</ol>
+<h2 id="Github-블로그를-선택한-이유">Github 블로그를 선택한 이유!</h2>
+<p>퇴사한 회사에서 주로 svn을 사용하여 git을 겸사 겸사 공부해보려고 합니다.</p>
+<h2 id="Github-블로그-만들기">Github 블로그 만들기</h2>
+<p>Github 블로그는 Gthub Page와 정적 사이트 생성기(Static Site Generator)의 조합이라고 보면됩니다.<br>
+정적 사이트 생성기는 다양한 종류가 있습니다.</p>
+<p>대표적으로 지킬(<a target="_blank" rel="noopener" href="https://jekyllrb.com">Jekyll</a> ruby 기반), 헥소(<a target="_blank" rel="noopener" href="https://hexo.io/ko/index.html">Hexo</a> node.js 기반), 휴고(<a target="_blank" rel="noopener" href="https://gohugo.io">Hugo</a> go 기반)가 있습니다.<br>
+그 중에서 헥소(<a target="_blank" rel="noopener" href="https://hexo.io/ko/index.html">Hexo</a> node.js 기반)를 선택했습니다.</p>
+<h3 id="Github-Page-생성">Github Page 생성</h3>
+<p><a target="_blank" rel="noopener" href="https://pages.github.com">공식 페이지</a>를 참고하여 생성하였습니다.</p>
+<ol>
+<li>
+<p>새로운 Repository 생성합니다.</p>
+ 
+</li>
+<li>
+<p>Repository name 후 Create Repository합니다.</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">💡 &#123;계정&#125;.github.io 형식으로 만들여야합니다.</span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.jsdelivr.net/gh/to-be-ordinarily/to-be-ordinarily.github.io@main/img/assets/git_blog/git_create_repository.png" alt=""></p>
+</li>
+<li>
+<p>생성된 git페이지를 확인합니다.<br>
+{계정}.github.io를 브라우저에 입력하여 확인합니다.<br>
+ex)<a href="https://to-be-ordinarily.github.io/">https://to-be-ordinarily.github.io</a></p>
+<p><img src="/img/assets/git_blog/git_blog_check.png" alt=""></p>
+<p>지금과 같이 기본 페이지가 표현됩니다.</p>
+</li>
+</ol>
+<h3 id="헥소-Hexo-설치하기">헥소(Hexo)설치하기</h3>
+<p><a target="_blank" rel="noopener" href="https://hexo.io/ko/index.html">공식 페이지</a>를 참고하여 생성했습니다.</p>
+<ol>
+<li>
+<p><a target="_blank" rel="noopener" href="https://hexo.io/ko/docs/">Hexo 설치하기</a></p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://hexo.io/ko/docs/">Hexo 설정하기</a></p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># blog 폴더에 Hexo를 초기화합니다.</span><br><span class="line">$ hexo init blog</span><br><span class="line"># blog 폴더로 이동합니다.</span><br><span class="line">$ cd blog</span><br><span class="line">#npm 설치합니다.</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://hexo.io/themes/">Hexo 테마 설정</a><br>
+<a target="_blank" rel="noopener" href="https://ppoffice.github.io/hexo-theme-icarus/">hexo-theme-icarus</a> 테마를 선택했습니다.</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#icarus 테마를 clone하여 받는다. </span><br><span class="line">$ git clone https://github.com/ppoffice/hexo-theme-icarus.git themes/icarus</span><br></pre></td></tr></table></figure>
+<p>✓명령어를 입력하는 경로가 hexo를 초기화 경로여야합니다.</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vi ./_config.yml</span><br><span class="line">#theme의 속성을 icarus로 변경합니다.</span><br><span class="line">$ theme: icarus</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>icarus 테마를 위해 필요한 npm 설치</p>
+<ul>
+<li>종류
+<ul>
+<li>bulma-stylus</li>
+<li>hexo-component-inferno</li>
+<li>hexo-renderer-inferno</li>
+<li>inferno</li>
+<li>inferno-create-element</li>
+</ul>
+</li>
+</ul>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install --save bulma-stylus@0.8.0 hexo-pagination@^2.0.0 hexo-renderer-inferno@^0.1.3 hexo-component-inferno@^1.0.2 inferno@^7.3.3 inferno-create-element@^7.3.3</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>Hexo 설정 체크</p>
+<p>테마 설정만 하여 큰 문제 없이 hexo 로컬 서버가 실행됩니다.</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 명령어 입력 후 Hexo is running 표현되면 정상입니다.</span><br><span class="line">$ hexo server</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src="/img/assets/git_blog/hexo_check_config.png" alt=""></p>
+</li>
+</ol>
+<h3 id="GitHub-Page-Hexo-연동하기">GitHub Page + Hexo 연동하기</h3>
+<ol>
+<li>
+<p>Hexo에서 Git으로 정적파일을 생성후 편하게 배포하기위한 패키지 설치</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>_config.yml 설정</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/&#123;계정&#125;/&#123;계정&#125;.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>publish용 정적파일 생성</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>Github 배포</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>정적 파일 생성과 배포</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo d -g</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>확인<br>
+Git Repository에 정상적으로 hexo 설정들이 push되었는지 확인합니다.</p>
+<p><img src="/img/assets/git_blog/git_push_check.png" alt=""></p>
+<p>로컬 서버 실행하여 테마가 정상적으로 적용 되었는지 확인합니다.</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<p><img src="/img/assets/git_blog/theme_check.png" alt=""></p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">💡 Tip 사용 편의를 위한 &amp;&amp; 명령어</span><br><span class="line">    설정파일 (_config.yml, _config.icarus.yml)은 간혹 clean후 generate를 해야 정상 반영됩니다.</span><br><span class="line">    &amp;&amp;의 의미는 앞의 명령어가 실행되었을 때 성공한 경우 다음 명령어를 실행합니다.</span><br><span class="line">    따라서 아래와 같이 작성하면 hexo clean, hexo 정적 파일 생성, hexo 서버 기동을 순차적으로 진행합니다. </span><br><span class="line">    $ hexo clean &amp;&amp; hexo generate &amp;&amp; hexo server --watch --draft</span><br></pre></td></tr></table></figure>
+<p>다음 포스팅에서는 설정을 변경하도록하겠습니다.</p>
+</li>
+</ol>
+</div></article></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/profile.png"></figure><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>South Korea</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">포스트</p><a href="/archives"><p class="title">3</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">카테고리</p><a href="/categories"><p class="title">2</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">태그</p><a href="/tags"><p class="title">0</p></a></div></div></nav><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/to-be-ordinarily"><i class="fab fa-github"></i></a></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">카테고리</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/github-blog/"><span class="level-start"><span class="level-item">github blog</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/oop/"><span class="level-start"><span class="level-item">oop</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">최근 글</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-01-27T08:42:13.000Z">2022-01-27</time></p><p class="title"><a href="/2022/01/27/solid-principle/">객체 지향 설계 SOLID</a></p><p class="categories"><a href="/categories/oop/">oop</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-01-26T07:01:45.000Z">2022-01-26</time></p><p class="title"><a href="/2022/01/26/blog-setting/">Github 블로그 width Hexo: 기본 설정편</a></p><p class="categories"><a href="/categories/github-blog/">github blog</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-01-26T07:01:45.000Z">2022-01-26</time></p><p class="title"><a href="/2022/01/26/blog-install/">Github 블로그 width Hexo : 설치편</a></p><p class="categories"><a href="/categories/github-blog/">github blog</a></p></div></article></div></div><!--!--><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">아카이브</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/01/"><span class="level-start"><span class="level-item">1월 2022</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></div></div></div></div><div class="column column-right is-4-tablet is-4-desktop is-4-widescreen  order-3 is-sticky"><!--!--></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img class="logo" src="/img/logo.png" alt="평범한 개발자" height="28"></a><p class="is-size-7"><span>&copy; 2022 to-be-ordinarily</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/to-be-ordinarily"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script>moment.locale("ko");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: false,
+                    fold: ''
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="맨 위로" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><script src="/js/dark.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="입력 하세요..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"입력 하세요...","untitled":"(제목 없음)","posts":"포스트","pages":"페이지","categories":"카테고리","tags":"태그"});
+        });</script></body></html>
